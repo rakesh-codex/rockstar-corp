@@ -1,6 +1,8 @@
 # 🚀 rockstar-corp
 
-**rockstar-corp** is a scalable, test-driven, enterprise-grade e-commerce microservice project built in Golang. Inspired by modern platforms like Amazon, the architecture supports modularity, clean design principles, and future feature extensibility.
+**rockstar-corp** is a scalable, test-driven, enterprise-grade e-commerce microservice project built in Golang. 
+
+Inspired by modern platforms like Amazon, the architecture supports modularity, clean design principles, and future feature extensibility.
 
 ---
 
@@ -92,7 +94,7 @@ All tests follow TDD practices and run in isolation.
 
 ```bash
 # Clone repository
-git clone https://github.com/your-user/rockstar-corp.git
+git clone [https://github.com/rakesh-codex/rockstar-corp]
 cd rockstar-corp
 
 # Run app (example)
