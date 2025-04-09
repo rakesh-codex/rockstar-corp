@@ -1,0 +1,49 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, coverage output
+*.test
+*.out
+
+# Output of the go coverage tool
+*.coverprofile
+*.cover.out
+
+# Logs
+*.log
+
+# IDE: GoLand
+.idea/
+*.iml
+
+# Dependency directories (if using Go modules)
+vendor/
+
+# Go build cache
+/tmp
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
+# Swagger/OpenAPI generated files (optional)
+docs/swagger/*
+
+# Static assets
+node_modules/
+dist/
+
+# Go workspace cache
+go.sum
+
+# Project specific ignored folders
+docs_sh/
