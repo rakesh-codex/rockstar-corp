@@ -2,9 +2,12 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
-
 	"rockstar-corp/internal/config"
+	"rockstar-corp/internal/domain/user"
+	userRepo "rockstar-corp/internal/infrastructure/repository"
+	userHttp "rockstar-corp/internal/interfaces/http"
+	userUC "rockstar-corp/internal/usecase/user"
+
 	"rockstar-corp/internal/infrastructure/db"
 )
 
@@ -13,10 +16,13 @@ func New(cfg *config.Config, dbConn *db.DB) *gin.Engine {
 
 	// Health check
 	r.GET("/health", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"status": "ok"})
+		c.JSON(200, gin.H{"status": "ok"})
 	})
 
-	// TODO: add more routes here (user, product, order...)
+	// User module wiring
+	userRepository := userRepo.NewUserRepository(dbConn.Conn)
+	userUseCase := userUC.New(userRepository)
+	userHttp.NewUserHandler(r, userUseCase)
 
 	return r
 }
